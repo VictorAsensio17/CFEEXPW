@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Club Finanzas Extremadura</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="shortcut icon" href="../assets/favicon.svg">
+    <meta name="theme-color" content="#1abc9c">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <div class="logo">
+                    <img src="../assets/logo.svg" alt="Club Finanzas EEX Logo" class="logo-icon">
+                    <span class="logo-text">Club Finanzas <strong>Extremadura</strong></span>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="about.html">Sobre Nosotros</a></li>
+                <li><a href="activities.html">Actividades</a></li>
+                <li><a href="resources.html">Recursos</a></li>
+                <li><a href="#" class="active">Contacto</a></li>
+            </ul>
+            <button class="cta-button" onclick="window.location.href='../index.html#admission'">Únete</button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" style="padding: 100px 0 60px;">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Contacto</h1>
+                <p>¿Tienes preguntas o sugerencias? Nos encantaría escucharte. Rellena el formulario o ponte en contacto directamente.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section style="padding: 80px 0; background: white;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start;">
+                <!-- Contact Info -->
+                <div>
+                    <h2 style="font-size: 2rem; margin-bottom: 30px; color: var(--text-dark);">Ponte en Contacto</h2>
+                    
+                    <div style="margin-bottom: 30px;">
+                        <h4 style="color: var(--primary-color); margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                            📧 Email
+                        </h4>
+                        <a href="mailto:clubfinanzasext@cfeexes.com" style="color: var(--text-light); text-decoration: none;">clubfinanzasext@cfeexes.com</a>
+                    </div>
+
+                    <div style="margin-bottom: 30px;">
+                        <h4 style="color: var(--primary-color); margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                            📱 Teléfono
+                        </h4>
+                        <a href="tel:+34612345678" style="color: var(--text-light); text-decoration: none;">+34 612 345 678</a>
+                    </div>
+
+                    <div style="margin-bottom: 30px;">
+                        <h4 style="color: var(--primary-color); margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                            📍 Ubicación
+                        </h4>
+                        <p style="color: var(--text-light);">Universidad de Extremadura<br>Campus de Badajoz<br>Extremadura, España</p>
+                    </div>
+
+                    <div style="margin-bottom: 30px;">
+                        <h4 style="color: var(--primary-color); margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                            🕐 Horarios
+                        </h4>
+                        <p style="color: var(--text-light);">Lunes a Viernes: 09:00 - 18:00<br>Sábado: 10:00 - 14:00<br>Domingo: Cerrado</p>
+                    </div>
+
+                    <div style="margin-bottom: 30px;">
+                        <h4 style="color: var(--primary-color); margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                            🌐 Redes Sociales
+                        </h4>
+                        <div style="display: flex; gap: 15px;">
+                            <a href="#" style="display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; background: var(--primary-color); color: white; border-radius: 50%; text-decoration: none; font-weight: bold;">in</a>
+                            <a href="#" style="display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; background: var(--primary-color); color: white; border-radius: 50%; text-decoration: none; font-weight: bold;">ig</a>
+                            <a href="#" style="display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; background: var(--primary-color); color: white; border-radius: 50%; text-decoration: none; font-weight: bold;">tw</a>
+                            <a href="#" style="display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; background: var(--primary-color); color: white; border-radius: 50%; text-decoration: none; font-weight: bold;">fb</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div style="background: #f8f9fa; padding: 40px; border-radius: 10px;">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 25px; color: var(--text-dark);">Envíanos un Mensaje</h3>
+                    
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">Nombre Completo</label>
+                            <input type="text" id="contactName" name="name" placeholder="Tu nombre" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactEmail">Email</label>
+                            <input type="email" id="contactEmail" name="email" placeholder="tu@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactSubject">Asunto</label>
+                            <input type="text" id="contactSubject" name="subject" placeholder="Asunto del mensaje" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactMessage">Mensaje</label>
+                            <textarea id="contactMessage" name="message" placeholder="Escribe tu mensaje..." rows="5" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                                <input type="checkbox" name="subscribe" style="width: 20px; height: 20px; cursor: pointer;">
+                                <span>Deseo recibir información sobre eventos futuros</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px;">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section style="padding: 80px 0; background: #f8f9fa;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 0.9rem; color: var(--primary-color); letter-spacing: 2px; margin-bottom: 10px;">PREGUNTAS</h2>
+            <h3 style="text-align: center; font-size: 2.5rem; margin-bottom: 50px; color: var(--text-dark);">Preguntas Frecuentes</h3>
+
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="background: white; padding: 25px; border-radius: 10px; margin-bottom: 20px; box-shadow: var(--shadow);">
+                    <details style="cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--text-dark); display: flex; justify-content: space-between; align-items: center;">
+                            <span>¿Cuáles son los requisitos para unirse al club?</span>
+                            <span>+</span>
+                        </summary>
+                        <p style="color: var(--text-light); margin-top: 15px; line-height: 1.7;">Puedes unirte si eres estudiante de la Universidad de Extremadura de cualquier grado o programa de máster. También aceptamos a recién graduados en los 2 años posteriores a su graduación.</p>
+                    </details>
+                </div>
+
+                <div style="background: white; padding: 25px; border-radius: 10px; margin-bottom: 20px; box-shadow: var(--shadow);">
+                    <details style="cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--text-dark); display: flex; justify-content: space-between; align-items: center;">
+                            <span>¿Cuál es el coste de la membresía?</span>
+                            <span>+</span>
+                        </summary>
+                        <p style="color: var(--text-light); margin-top: 15px; line-height: 1.7;">La membresía es completamente gratuita para todos los estudiantes de la Universidad de Extremadura. Solo tienes que rellenar el formulario de inscripción.</p>
+                    </details>
+                </div>
+
+                <div style="background: white; padding: 25px; border-radius: 10px; margin-bottom: 20px; box-shadow: var(--shadow);">
+                    <details style="cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--text-dark); display: flex; justify-content: space-between; align-items: center;">
+                            <span>¿Con qué frecuencia se realizan eventos?</span>
+                            <span>+</span>
+                        </summary>
+                        <p style="color: var(--text-light); margin-top: 15px; line-height: 1.7;">Organizamos al menos 2-3 eventos o talleres al mes, incluyendo debates, workshops, sesiones de networking y formación especializada.</p>
+                    </details>
+                </div>
+
+                <div style="background: white; padding: 25px; border-radius: 10px; margin-bottom: 20px; box-shadow: var(--shadow);">
+                    <details style="cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--text-dark); display: flex; justify-content: space-between; align-items: center;">
+                            <span>¿Puedo participar en eventos si no tengo experiencia financiera?</span>
+                            <span>+</span>
+                        </summary>
+                        <p style="color: var(--text-light); margin-top: 15px; line-height: 1.7;">¡Por supuesto! Nuestros eventos están diseñados para todos los niveles. Desde principiantes hasta expertos pueden beneficiarse de nuestro programa.</p>
+                    </details>
+                </div>
+
+                <div style="background: white; padding: 25px; border-radius: 10px; box-shadow: var(--shadow);">
+                    <details style="cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--text-dark); display: flex; justify-content: space-between; align-items: center;">
+                            <span>¿Cómo puedo colaborar o presentar en el club?</span>
+                            <span>+</span>
+                        </summary>
+                        <p style="color: var(--text-light); margin-top: 15px; line-height: 1.7;">¡Nos encantaría tu colaboración! Contáctanos directamente a través de este formulario o por email con tu propuesta. Estamos abiertos a ideas y charlas.</p>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../assets/logo.svg" alt="Logo" style="width: 40px; height: 40px;">
+                        <span>Club Finanzas Extremadura</span>
+                    </div>
+                    <p>Conectando con la comunidad financiera extremeña.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h5>NAVEGACIÓN</h5>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="about.html">Sobre Nosotros</a></li>
+                        <li><a href="activities.html">Actividades</a></li>
+                        <li><a href="resources.html">Recursos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h5>LEGAL</h5>
+                    <ul>
+                        <li><a href="#">Privacidad</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="#">Aviso Legal</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Club de Finanzas Estudiantes de Extremadura. Todos los derechos reservados.</p>
+                <p>Hecho con ❤️ para los futuros financieros.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Enhanced contact form handling
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = {
+                    name: document.getElementById('contactName').value,
+                    email: document.getElementById('contactEmail').value,
+                    subject: document.getElementById('contactSubject').value,
+                    message: document.getElementById('contactMessage').value,
+                    subscribe: document.querySelector('input[name="subscribe"]').checked,
+                    timestamp: new Date().toLocaleString('es-ES')
+                };
+                
+                console.log('Mensaje de contacto:', formData);
+                showNotification('¡Mensaje enviado correctamente! Nos pondremos en contacto pronto.', 'success');
+                contactForm.reset();
+                
+                setTimeout(() => removeNotification(), 5000);
+            });
+        }
+
+        // Make details elements work better
+        document.querySelectorAll('details').forEach(detail => {
+            detail.addEventListener('toggle', function() {
+                const summary = this.querySelector('summary');
+                if (this.open) {
+                    summary.style.color = 'var(--primary-color)';
+                    summary.querySelector('span:last-child').textContent = '−';
+                } else {
+                    summary.style.color = 'var(--text-dark)';
+                    summary.querySelector('span:last-child').textContent = '+';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

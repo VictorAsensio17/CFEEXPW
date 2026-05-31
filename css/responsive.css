@@ -1,0 +1,373 @@
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .hero .container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .admission .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Navigation */
+    .nav-links {
+        gap: 1rem;
+        margin-left: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content > p {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    /* Pillars */
+    .pillars {
+        padding: 60px 0;
+    }
+
+    .pillars h3 {
+        font-size: 2rem;
+    }
+
+    .pillars-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+
+    .pillar-card {
+        padding: 20px;
+    }
+
+    .pillar-icon {
+        font-size: 2.5rem;
+    }
+
+    /* Stats */
+    .stats {
+        padding: 60px 0;
+    }
+
+    .stats h2 {
+        font-size: 2rem;
+    }
+
+    .stat-card {
+        padding: 30px 15px;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    /* Events */
+    .upcoming-events {
+        padding: 60px 0;
+    }
+
+    .section-header h3 {
+        font-size: 2rem;
+    }
+
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Admission */
+    .admission {
+        padding: 60px 0;
+    }
+
+    .admission-text h3 {
+        font-size: 1.8rem;
+    }
+
+    .admission-form {
+        padding: 25px;
+    }
+
+    /* Resources */
+    .resources {
+        padding: 60px 0;
+    }
+
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resource-icon {
+        font-size: 2rem;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Navbar */
+    .navbar .container {
+        padding: 1rem 15px;
+    }
+
+    .logo {
+        gap: 8px;
+    }
+
+    .logo-icon {
+        font-size: 1.5rem;
+    }
+
+    .logo-text {
+        font-size: 1rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .cta-button {
+        display: none;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 40px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-content > p {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+
+    .market-overview {
+        padding: 20px;
+    }
+
+    .market-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 12px 0;
+    }
+
+    /* Pillars */
+    .pillars {
+        padding: 40px 0;
+    }
+
+    .pillars h3 {
+        font-size: 1.6rem;
+    }
+
+    .pillars > .container > p {
+        font-size: 1rem;
+    }
+
+    .pillars-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .pillar-card {
+        padding: 15px;
+    }
+
+    .pillar-icon {
+        font-size: 2rem;
+    }
+
+    .pillar-card h4 {
+        font-size: 1.1rem;
+    }
+
+    /* Stats */
+    .stats {
+        padding: 40px 0;
+    }
+
+    .stats h2 {
+        font-size: 1.6rem;
+    }
+
+    .stats > .container > p {
+        font-size: 0.95rem;
+    }
+
+    .stats-grid {
+        gap: 20px;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+
+    /* Events */
+    .upcoming-events {
+        padding: 40px 0;
+    }
+
+    .section-header {
+        margin-bottom: 30px;
+    }
+
+    .section-header h3 {
+        font-size: 1.6rem;
+    }
+
+    .section-header > p {
+        font-size: 0.95rem;
+    }
+
+    .event-card {
+        padding: 20px;
+    }
+
+    .event-card h4 {
+        font-size: 1.1rem;
+    }
+
+    /* Admission */
+    .admission {
+        padding: 40px 0;
+    }
+
+    .admission-text h3 {
+        font-size: 1.6rem;
+    }
+
+    .admission-text > p {
+        font-size: 0.95rem;
+    }
+
+    .benefit-item {
+        gap: 15px;
+    }
+
+    .admission-form {
+        padding: 20px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+
+    .btn-submit {
+        padding: 12px;
+    }
+
+    /* Resources */
+    .resources {
+        padding: 40px 0;
+    }
+
+    .resource-card h4 {
+        font-size: 1.1rem;
+    }
+
+    .resource-card p {
+        font-size: 0.95rem;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 40px 0 15px;
+    }
+
+    .footer-content {
+        gap: 25px;
+        margin-bottom: 30px;
+    }
+
+    .footer-section h5 {
+        font-size: 0.9rem;
+    }
+
+    .footer-section p {
+        font-size: 0.9rem;
+    }
+
+    .footer-section a {
+        font-size: 0.9rem;
+    }
+
+    .footer-bottom p {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .pillars h3 {
+        font-size: 1.4rem;
+    }
+
+    .section-header h3 {
+        font-size: 1.4rem;
+    }
+
+    .admission-text h3 {
+        font-size: 1.4rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+}

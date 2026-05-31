@@ -1,0 +1,54 @@
+# Dependencias de Node (si las uses)
+node_modules/
+npm-debug.log
+package-lock.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Sistema operativo
+.DS_Store
+.Thumbs.db
+
+# Bases de datos (si las añades)
+*.db
+*.sqlite
+*.sqlite3
+
+# Variables de entorno
+.env
+.env.local
+.env.*.local
+
+# Compilación/Build
+dist/
+build/
+*.min.js
+*.min.css
+
+# Backups
+*.bak
+*.backup
+*~
+
+# Archivos temporales
+temp/
+tmp/
+*.tmp
+
+# Testing
+coverage/
+.nyc_output/
+
+# Archivos del editor
+*.sublime-project
+*.sublime-workspace

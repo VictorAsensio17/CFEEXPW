@@ -1,0 +1,36 @@
+{
+  "name": "Club Finanzas Extremadura",
+  "version": "1.0.0",
+  "description": "Página web oficial del Club de Finanzas Estudiantes de Extremadura",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "build": "echo 'Build script would go here'",
+    "dev": "echo 'Development server setup'"
+  },
+  "keywords": [
+    "finanzas",
+    "educación",
+    "estudiantes",
+    "mercados",
+    "economía",
+    "extremadura"
+  ],
+  "author": "Club de Finanzas Estudiantes de Extremadura",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cfeex/website"
+  },
+  "homepage": "https://clubfinanzasextremadura.es",
+  "contact": {
+    "email": "clubfinanzasext@cfeexes.com",
+    "phone": "+34 612 345 678",
+    "website": "https://clubfinanzasextremadura.es"
+  },
+  "metadata": {
+    "language": "es",
+    "charset": "UTF-8",
+    "viewport": "width=device-width, initial-scale=1.0"
+  }
+}
