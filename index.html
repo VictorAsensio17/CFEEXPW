@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Club de Finanzas Estudiantes de Extremadura - La plataforma donde nace la próxima generación de líderes financieros.">
     <title>Club Finanzas Extremadura - Educación Financiera</title>
-    <link rel="icon" type="image/svg+xml" href="club de finanzas eex.png">
-    <link rel="shortcut icon" href="club de finanzas eex.png">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="shortcut icon" href="assets/favicon.png">
     <meta name="theme-color" content="#1abc9c">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -17,7 +17,7 @@
         <div class="container">
             <div class="navbar-brand">
                 <div class="logo">
-                    <img src="club de finanzas eex.png" alt="Club Finanzas EEX Logo" class="logo-icon">
+                    <img src="assets/favicon.png" alt="Club Finanzas EEX Logo" class="logo-icon">
                     <span class="logo-text">Club Finanzas <strong>Extremadura</strong></span>
                 </div>
             </div>
@@ -52,20 +52,20 @@
             <div class="hero-image">
                 <div class="market-overview">
                     <h3>MARKET OVERVIEW</h3>
-                    <div class="market-item">
+                    <div class="market-item" data-symbol="^IBEX" onclick="openStockChart('IBEX 35', '^IBEX')" style="cursor: pointer;">
                         <span class="market-label">IBEX 35</span>
-                        <span class="market-value">18,436.70</span>
-                        <span class="market-change positive">+0.80%</span>
+                        <span class="market-value" id="price-^IBEX">18,436.70</span>
+                        <span class="market-change positive" id="change-^IBEX">+0.80%</span>
                     </div>
-                    <div class="market-item">
+                    <div class="market-item" data-symbol="^GSPC" onclick="openStockChart('S&P 500', '^GSPC')" style="cursor: pointer;">
                         <span class="market-label">S&P 500</span>
-                        <span class="market-value">7519.21</span>
-                        <span class="market-change positive">+0.61%</span>
+                        <span class="market-value" id="price-^GSPC">7519.21</span>
+                        <span class="market-change positive" id="change-^GSPC">+0.61%</span>
                     </div>
-                    <div class="market-item">
+                    <div class="market-item" data-symbol="EURUSD=X" onclick="openStockChart('EUR/USD', 'EURUSD=X')" style="cursor: pointer;">
                         <span class="market-label">EUR/USD</span>
-                        <span class="market-value">1.1628</span>
-                        <span class="market-change negative">-0.13%</span>
+                        <span class="market-value" id="price-EURUSD=X">1.1628</span>
+                        <span class="market-change negative" id="change-EURUSD=X">-0.13%</span>
                     </div>
                 </div>
             </div>
@@ -262,7 +262,7 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <img src="assets/logo.svg" alt="Logo" style="width: 40px; height: 40px;">
+                        <img src="assets/favicon.png" alt="Logo" class="footer-logo-img">
                         <span>Club Finanzas Extremadura</span>
                     </div>
                     <p>La mayor comunidad universitaria dedicada a la educación financiera y el análisis de mercados en Extremadura.</p>
@@ -299,6 +299,21 @@
         </div>
     </footer>
 
+    <!-- Modal para gráficas -->
+    <div id="chartModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeStockChart()">&times;</span>
+            <h2 id="chartTitle">Gráfica del Índice</h2>
+            <div class="chart-container">
+                <canvas id="stockChart"></canvas>
+            </div>
+            <p id="chartInfo" class="chart-info"></p>
+        </div>
+    </div>
+
+    <!-- Librería Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/financial-data.js"></script>
 </body>
 </html>
