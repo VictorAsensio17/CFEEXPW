@@ -29,7 +29,7 @@
                 <li><a href="pages/resources.html">Recursos</a></li>
                 <li><a href="pages/contact.html">Contacto</a></li>
             </ul>
-            <button class="cta-button">Únete</button>
+            <a href="#admission" class="cta-button" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">Únete</a>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -233,39 +233,49 @@
                     </div>
                 </div>
             </div>
-   <form id="admissionForm">
-    <div class="form-group">
-        <label for="Nombre">Nombre Completo</label>
-        <input type="text" id="Nombre" name="Nombre" placeholder="Ej: Juan Pérez García" required>
+   <div class="admission-form">
+                <form id="admissionForm">
+                    <div class="form-group">
+                        <label for="Nombre">Nombre Completo</label>
+                        <input type="text" id="Nombre" name="Nombre" placeholder="Ej: Juan Pérez García" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="Telefono">Teléfono</label>
+                        <input type="tel" id="Teléfono" name="Telefono" placeholder="Ej: +34 600 000 000" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Email">Email Universitario</label>
+                        <input type="email" id="Email" name="Email" placeholder="Ej: usuario@alumnos.unex.es" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Grupo">Grupo / Situación Académica</label>
+                        <select id="Grupo" name="Grupo" required>
+                            <option value="">Selecciona tu grupo</option>
+                            <option value="Grado 1º Año">Grado 1º Año</option>
+                            <option value="Grado 2º Año">Grado 2º Año</option>
+                            <option value="Grado 3º Año">Grado 3º Año</option>
+                            <option value="Grado 4º Año">Grado 4º Año</option>
+                            <option value="Máster">Máster</option>
+                            <option value="Alumni">Alumni</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Mensaje">Facultad / Campo de referencia</label>
+                        <textarea id="Mensaje" name="Mensaje" placeholder="Ej: Facultad de Ciencias Económicas y Empresariales / Profesional en Finanzas" rows="3" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">Enviar Solicitud de Ingreso</button>
+                    
+                    <div id="formStatus" style="margin-top: 15px; font-weight: 500; display: none; text-align: center;"></div>
+                </form>
+            </div>
+            
+        </div>
     </div>
-    <div class="form-group">
-        <label for="Telefono">Teléfono</label>
-        <input type="tel" id="Telefono" name="Telefono" placeholder="Ej: +34 600 000 000" required>
-    </div>
-    <div class="form-group"></div>
-        <label for="Email">Email</label>
-        <input type="email" id="Email" name="Email" placeholder="Ej: juan.perez@alumnos.unex.es" required>
-    </div>
-    <div class="form-group">
-        <label for="Grupo">Grupo / Situación Académica</label>
-        <select id="Grupo" name="Grupo" required>
-            <option value="">Selecciona tu grupo</option>
-            <option value="Grado 1º Año">Grado 1º Año</option>
-            <option value="Grado 2º Año">Grado 2º Año</option>
-            <option value="Grado 3º Año">Grado 3º Año</option>
-            <option value="Grado 4º Año">Grado 4º Año</option>
-            <option value="Grado 5º Año">Grado 5º Año</option>
-            <option value="Otro">Otro</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <label for="Campo">Facultad / Campo de referencia</label>
-        <textarea id="Campo" name="Campo" placeholder="Ej: Facultad de Ciencias Económicas y Empresariales / Profesional en Finanzas" rows="4" required></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">Enviar Solicitud de Ingreso</button>
-    
-    <div id="formStatus" style="margin-top: 15px; font-weight: 500; display: none; text-align: left;"></div>
-</form>
 </section>
 
 <!-- Recursos -->
@@ -393,7 +403,7 @@
             formData.append('Fecha', fechaActual);
 
             // URL de tu API de Apps Script
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbxZDuy5UsVU3pIfSS67JzKXayoMKKmGdss9gpjQTZB8sgC35otU__e7TsO5ytaUOmkQ/exec';
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwJ1wBTtwcmrZwL016VQdLTjIOtpqrhIRSV2enV0ngjFYX5_SgAEwZoxkQZvGMaYpBW/exec';
 
             // Enviar datos vía POST
             fetch(scriptURL, { method: 'POST', body: formData })
