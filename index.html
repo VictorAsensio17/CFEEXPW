@@ -202,76 +202,49 @@
             </div>
         </div>
     </section>
-
-    <!-- Admisiones -->
-    <section id="admission" class="admission">
+   <section id="admission" class="admission">
         <div class="container">
-            <div class="admission-content">
-                <div class="admission-text">
-                    <h2>ADMISIONES</h2>
-                    <h3>Únete a la comunidad financiera de Extremadura</h3>
-                    <p>Buscamos estudiantes comprometidos con ganas de aprender sobre mercados y economía. Rellena el formulario para iniciar tu proceso de inscripción.</p>
-                    
-                    <div class="benefits">
-                        <div class="benefit-item">
-                            <span class="benefit-number">1</span>
-                            <div>
-                                <h5>Excelencia Universitaria</h5>
-                                <p>Para alumnos extremeños de cualquier grado con inquietudes económicas y financieras.</p>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <span class="benefit-number">2</span>
-                            <div>
-                                <h5>Networking Real</h5>
-                                <p>Conexión directa con profesionales del sector financiero y empresarial.</p>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <span class="benefit-number">3</span>
-                            <div>
-                                <h5>Acceso Exclusivo</h5>
-                                <p>Recursos, análisis y contenido especializado para miembros del club.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="admission-form">
-                    <form id="admissionForm">
-                        <div class="form-group">
-                            <label for="fullName">Nombre Completo</label>
-                            <input type="text" id="fullName" name="fullName" placeholder="Ej: Juan Pérez García" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Correo Universitario</label>
-                            <input type="email" id="email" name="email" placeholder="usuario@alumnos.unex.es" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="degree">Grado / Situación Académica</label>
-                            <select id="degree" name="degree" required>
-                                <option value="">Selecciona tu situación</option>
-                                <option value="grado-1">Grado 1º Año</option>
-                                <option value="grado-2">Grado 2º Año</option>
-                                <option value="grado-3">Grado 3º Año</option>
-                                <option value="grado-4">Grado 4º Año</option>
-                                <option value="grado-5">Grado 5º Año</option>
-                                <option value="master">Máster</option>
-                                <option value="pgrado">Alumni</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="interests">¿Por qué quieres unirte?</label>
-                            <textarea id="interests" name="interests" placeholder="Cuéntanos brevemente tus intereses financieros y qué esperas del club..." rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-submit">Enviar Solicitud de Ingreso</button>
-                    </form>
-                </div>
+            <div class="section-header">
+                <h2>ÚNETE AL CLUB</h2>
+                <h3>Solicita tu ingreso y forma parte de la comunidad financiera más activa de Extremadura.</h3>
+                <p>Completa el formulario a continuación para que podamos conocerte mejor y darte la bienvenida al club.</p>
             </div>
-        </div>
-    </section>
+   <form id="admissionForm">
+    <div class="form-group">
+        <label for="Nombre">Nombre Completo</label>
+        <input type="text" id="Nombre" name="Nombre" placeholder="Ej: Juan Pérez García" required>
+    </div>
+    <div class="form-group">
+        <label for="Telefono">Teléfono</label>
+        <input type="tel" id="Telefono" name="Telefono" placeholder="Ej: +34 600 000 000" required>
+    </div>
+    <div class="form-group"></div>
+        <label for="Email">Email</label>
+        <input type="email" id="Email" name="Email" placeholder="Ej: juan.perez@alumnos.unex.es" required>
+    </div>
+    <div class="form-group">
+        <label for="Grupo">Grupo / Situación Académica</label>
+        <select id="Grupo" name="Grupo" required>
+            <option value="">Selecciona tu grupo</option>
+            <option value="Grado 1º Año">Grado 1º Año</option>
+            <option value="Grado 2º Año">Grado 2º Año</option>
+            <option value="Grado 3º Año">Grado 3º Año</option>
+            <option value="Grado 4º Año">Grado 4º Año</option>
+            <option value="Grado 5º Año">Grado 5º Año</option>
+            <option value="Otro">Otro</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="Campo">Facultad / Campo de referencia</label>
+        <textarea id="Campo" name="Campo" placeholder="Ej: Facultad de Ciencias Económicas y Empresariales / Profesional en Finanzas" rows="4" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">Enviar Solicitud de Ingreso</button>
+    
+    <div id="formStatus" style="margin-top: 15px; font-weight: 500; display: none; text-align: left;"></div>
+</form>
+</section>
 
-    <!-- Recursos -->
+<!-- Recursos -->
     <section class="resources">
         <div class="container">
             <div class="section-header">
@@ -373,5 +346,51 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/financial-data.js"></script>
+
+    <script>
+        document.getElementById('admissionForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Evita que la página se recargue
+            
+            const form = this;
+            const btn = document.getElementById('submitBtn');
+            const statusDiv = document.getElementById('formStatus');
+            
+            // Cambiar el botón a estado de carga
+            const originalText = btn.innerText;
+            btn.innerText = 'Enviando...';
+            btn.disabled = true;
+            statusDiv.style.display = 'none'; // Ocultar mensajes previos
+            
+            // Recoger los datos del formulario
+            const formData = new FormData(form);
+            
+            // Añadir la Fecha actual automáticamente (formato dd/mm/yyyy, hh:mm:ss)
+            const fechaActual = new Date().toLocaleString('es-ES');
+            formData.append('Fecha', fechaActual);
+
+            // URL de tu API de Apps Script
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyb3A5-viwf5X_YE5_PmyUbge5vMRH8DZRoPrlltWYNl4BzSJMsQX1rRrMQdsPi_qOX/exec';
+
+            // Enviar datos vía POST
+            fetch(scriptURL, { method: 'POST', body: formData })
+                .then(response => {
+                    statusDiv.style.display = 'block';
+                    statusDiv.style.color = '#1abc9c'; // Color principal del club
+                    statusDiv.innerText = '¡Solicitud enviada con éxito! Nos pondremos en contacto contigo pronto.';
+                    form.reset(); // Limpiar el formulario
+                })
+                .catch(error => {
+                    statusDiv.style.display = 'block';
+                    statusDiv.style.color = '#e74c3c'; // Rojo para indicar error
+                    statusDiv.innerText = 'Hubo un error al enviar la solicitud. Por favor, inténtalo de nuevo.';
+                    console.error('Error!', error.message);
+                })
+                .finally(() => {
+                    // Restaurar el botón a su estado original
+                    btn.innerText = originalText;
+                    btn.disabled = false;
+                });
+        });
+    </script>
 </body>
 </html>
