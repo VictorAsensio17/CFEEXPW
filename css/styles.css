@@ -234,10 +234,16 @@ body {
 }
 
 .market-overview {
-    background: var(--white);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.market-overview.tradingview-hero-container {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .market-overview h3 {
@@ -245,6 +251,7 @@ body {
     color: var(--text-light);
     margin-bottom: 20px;
     letter-spacing: 1px;
+    display: none;
 }
 
 .market-item {
@@ -277,6 +284,72 @@ body {
 
 .market-change.positive {
     color: #27ae60;
+}
+
+/* TradingView Widgets en Hero */
+.tradingview-widget-wrapper-small {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    min-height: 350px;
+}
+
+.tradingview-widget-wrapper-small:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(26, 188, 156, 0.2);
+}
+
+.tradingview-widget-wrapper-small > div {
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+}
+
+/* Responsive market overview */
+@media (max-width: 1024px) {
+    .market-overview {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .tradingview-widget-wrapper-small {
+        min-height: 300px;
+    }
+
+    .tradingview-widget-wrapper-small > div {
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .market-overview {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .tradingview-widget-wrapper-small {
+        min-height: 280px;
+    }
+
+    .tradingview-widget-wrapper-small > div {
+        min-height: 280px;
+    }
+}
+
+@media (max-width: 600px) {
+    .market-overview {
+        gap: 10px;
+    }
+
+    .tradingview-widget-wrapper-small {
+        min-height: 250px;
+    }
+
+    .tradingview-widget-wrapper-small > div {
+        min-height: 250px;
+    }
 }
 
 .market-change.negative {
@@ -765,24 +838,43 @@ body {
 
 .social-links {
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 .social-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.1);
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     border-radius: 50%;
     color: var(--white);
     text-decoration: none;
-    transition: var(--transition);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+    box-shadow: 0 8px 20px rgba(26, 188, 156, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 0;
+}
+
+.social-icon img {
+    width: 65%;
+    height: 65%;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    transition: all 0.4s ease;
 }
 
 .social-icon:hover {
-    background: var(--primary-color);
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    transform: translateY(-8px) scale(1.1);
+    box-shadow: 0 15px 40px rgba(26, 188, 156, 0.5);
+    border-color: var(--white);
+}
+
+.social-icon:hover img {
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2)) brightness(1.1);
+    transform: scale(1.15);
 }
 
 .footer-bottom {
@@ -921,3 +1013,7 @@ body {
         font-size: 0.8rem;
     }
 }
+
+/* ============================================
+   ANÁLISIS TÉCNICO - TRADINGVIEW WIDGETS
+   ============================================ */

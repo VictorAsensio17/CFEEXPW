@@ -10,6 +10,7 @@
     <meta name="theme-color" content="#1abc9c">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -50,22 +51,71 @@
                 </div>
             </div>
             <div class="hero-image">
-                <div class="market-overview">
-                    <h3>MARKET OVERVIEW</h3>
-                    <div class="market-item" data-symbol="^IBEX" onclick="openStockChart('IBEX 35', '^IBEX')" style="cursor: pointer;">
-                        <span class="market-label">IBEX 35</span>
-                        <span class="market-value" id="price-^IBEX">18,436.70</span>
-                        <span class="market-change positive" id="change-^IBEX">+0.80%</span>
+                <div class="market-overview tradingview-hero-container">
+                    <!-- Chart 1: Oro -->
+                    <div class="tradingview-widget-wrapper-small">
+                        <div id="tradingview_chart_gold"></div>
+                        <script type="text/javascript">
+                            new TradingView.widget({
+                                "autosize": true,
+                                "symbol": "FX:XAUUSD",
+                                "interval": "D",
+                                "timezone": "Europe/Madrid",
+                                "theme": "dark",
+                                "style": "1",
+                                "locale": "es",
+                                "enable_publishing": false,
+                                "allow_symbol_change": true,
+                                "container_id": "tradingview_chart_gold",
+                                "hide_top_toolbar": true,
+                                "hide_side_toolbar": true,
+                                "hide_volume": true
+                            });
+                        </script>
                     </div>
-                    <div class="market-item" data-symbol="^GSPC" onclick="openStockChart('S&P 500', '^GSPC')" style="cursor: pointer;">
-                        <span class="market-label">S&P 500</span>
-                        <span class="market-value" id="price-^GSPC">7519.21</span>
-                        <span class="market-change positive" id="change-^GSPC">+0.61%</span>
+
+                    <!-- Chart 2: Core S&P 500 USD -->
+                    <div class="tradingview-widget-wrapper-small">
+                        <div id="tradingview_chart_sp500"></div>
+                        <script type="text/javascript">
+                            new TradingView.widget({
+                                "autosize": true,
+                                "symbol": "VOO",
+                                "interval": "D",
+                                "timezone": "Europe/Madrid",
+                                "theme": "dark",
+                                "style": "1",
+                                "locale": "es",
+                                "enable_publishing": false,
+                                "allow_symbol_change": true,
+                                "container_id": "tradingview_chart_sp500",
+                                "hide_top_toolbar": true,
+                                "hide_side_toolbar": true,
+                                "hide_volume": true
+                            });
+                        </script>
                     </div>
-                    <div class="market-item" data-symbol="EURUSD=X" onclick="openStockChart('EUR/USD', 'EURUSD=X')" style="cursor: pointer;">
-                        <span class="market-label">EUR/USD</span>
-                        <span class="market-value" id="price-EURUSD=X">1.1628</span>
-                        <span class="market-change negative" id="change-EURUSD=X">-0.13%</span>
+
+                    <!-- Chart 3: Euro Stoxx 50 - Índice Estable -->
+                    <div class="tradingview-widget-wrapper-small">
+                        <div id="tradingview_chart_eurusd"></div>
+                        <script type="text/javascript">
+                            new TradingView.widget({
+                                "autosize": true,
+                                "symbol": "STOXX:SX5E",
+                                "interval": "D",
+                                "timezone": "Europe/Madrid",
+                                "theme": "dark",
+                                "style": "1",
+                                "locale": "es",
+                                "enable_publishing": false,
+                                "allow_symbol_change": true,
+                                "container_id": "tradingview_chart_eurusd",
+                                "hide_top_toolbar": true,
+                                "hide_side_toolbar": true,
+                                "hide_volume": true
+                            });
+                        </script>
                     </div>
                 </div>
             </div>
@@ -267,8 +317,15 @@
                     </div>
                     <p>La mayor comunidad universitaria dedicada a la educación financiera y el análisis de mercados en Extremadura.</p>
                     <div class="social-links">
-                        <a href="#" class="social-icon">in</a>
-                        <a href="#" class="social-icon">ig</a>
+                        <a href="#" class="social-icon" title="LinkedIn">
+                            <img src="assets/linkedin.png" alt="LinkedIn">
+                        </a>
+                        <a href="#" class="social-icon" title="Instagram">
+                            <img src="assets/instagram.png" alt="Instagram">
+                        </a>
+                        <a href="#" class="social-icon" title="X (Twitter)">
+                            <img src="assets/x.png" alt="X">
+                        </a>
                     </div>
                 </div>
 
