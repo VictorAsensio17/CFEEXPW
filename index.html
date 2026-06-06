@@ -22,6 +22,9 @@
                     <span class="logo-text" style="font-weight: arial; color: #1d5c21;">C.F.E.EX</span>
                 </div>
             </div>
+
+            <button id="menu-btn" class="mobile-menu-btn">☰</button>
+
             <ul class="nav-links">
                 <li><a href="#inicio" class="active">Inicio</a></li>
                 <li><a href="pages/about.html">Sobre Nosotros</a></li>
@@ -29,7 +32,7 @@
                 <li><a href="pages/resources.html">Recursos</a></li>
                 <li><a href="pages/contact.html">Contacto</a></li>
             </ul>
-            <a href="#admission" class="cta-button" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">Únete</a>
+            <a href="pages/form.html" class="cta-button" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">Únete</a>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -134,7 +137,7 @@
                 <h1 class="hero-animated-text" style="color: #FFFFFF !important; text-shadow: 2px 4px 8px rgba(0,0,0,0.8), 0 0 30px rgba(0,0,0,0.6) !important; font-weight: 800;">Impulsa tu futuro financiero desde la facultad</h1>
                 <p class="hero-animated-text" style="color: #F8F9FA !important; text-shadow: 1px 2px 6px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.7) !important; font-size: 1.15rem; font-weight: 500; line-height: 1.6;">Únete a la red líder de estudiantes de Extremadura apasionados por la economía y los mercados. Networking, análisis real y formación exclusiva.</p>
                 <div class="hero-buttons" style="position: relative; z-index: 3; animation: slideUpFade 1s ease-out 0.4s forwards; opacity: 0;">
-                    <button class="btn btn-primary" style="color: #F8F9FA !important; text-shadow: 1px 2px 6px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.7) !important; font-size: 1.15rem; font-weight: 500; line-height: 1.6;" onclick="scrollToSection('admission')">Únete Ahora</button>
+                    <a href="pages/form.html" class="btn btn-primary" style="color: #F8F9FA !important; text-shadow: 1px 2px 6px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.7) !important; font-size: 1.15rem; font-weight: 500; line-height: 1.6;">Únete Ahora</a>
                     <button class="btn btn-secondary" style="color: #F8F9FA !important; text-shadow: 1px 2px 6px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.7) !important; font-size: 1.15rem; font-weight: 500; line-height: 1.6;">Conocer más</button>
                 </div>
             </div>
@@ -290,82 +293,7 @@
             </div>
         </div>
     </section>
-   <section id="admission" class="admission">
-        <div class="container">
-            <div class="section-header">
-                <h2>ÚNETE AL CLUB</h2>
-                <h3>Solicita tu ingreso y forma parte de la comunidad financiera más activa de Extremadura.</h3>
-                <p>Completa el formulario a continuación para que podamos conocerte mejor y darte la bienvenida al club.</p>
-                <div class="benefits">
-                        <div class="benefit-item">
-                            <span class="benefit-number">1</span>
-                            <div>
-                                <h5>Excelencia Universitaria</h5>
-                                <p>Para alumnos extremeños de cualquier grado con inquietudes económicas y financieras.</p>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <span class="benefit-number">2</span>
-                            <div>
-                                <h5>Networking Real</h5>
-                                <p>Conexión directa con profesionales del sector financiero y empresarial.</p>
-                            </div>
-                        </div>
-                        <div class="benefit-item">
-                            <span class="benefit-number">3</span>
-                            <div>
-                                <h5>Acceso Exclusivo</h5>
-                                <p>Recursos, análisis y contenido especializado para miembros del club.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-   <div class="admission-form">
-                <form id="admissionForm">
-                    <div class="form-group">
-                        <label for="Nombre">Nombre Completo</label>
-                        <input type="text" id="Nombre" name="Nombre" placeholder="Ej: Juan Pérez García" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="Telefono">Teléfono</label>
-                        <input type="tel" id="Teléfono" name="Telefono" placeholder="Ej: +34 600 000 000" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="Email">Email Universitario</label>
-                        <input type="email" id="Email" name="Email" placeholder="Ej: usuario@alumnos.unex.es" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="Grupo">Grupo / Situación Académica</label>
-                        <select id="Grupo" name="Grupo" required>
-                            <option value="">Selecciona tu grupo</option>
-                            <option value="Grado 1º Año">Grado 1º Año</option>
-                            <option value="Grado 2º Año">Grado 2º Año</option>
-                            <option value="Grado 3º Año">Grado 3º Año</option>
-                            <option value="Grado 4º Año">Grado 4º Año</option>
-                            <option value="Máster">Máster</option>
-                            <option value="Alumni">Alumni</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="Mensaje">Facultad / Campo de referencia</label>
-                        <textarea id="Mensaje" name="Mensaje" placeholder="Ej: Facultad de Ciencias Económicas y Empresariales / Profesional en Finanzas" rows="3" required></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">Enviar Solicitud de Ingreso</button>
-                    
-                    <div id="formStatus" style="margin-top: 15px; font-weight: 500; display: none; text-align: center;"></div>
-                </form>
-            </div>
-            
-        </div>
-    </div>
-</section>
-
+   
 <!-- Recursos -->
     <section class="resources">
         <div class="container">
@@ -514,5 +442,25 @@
                 });
         });
     </script>
+
+<script>
+    // Seleccionamos el botón y el contenedor del menú
+    const menuBtn = document.getElementById('menu-btn');
+    const menuLinks = document.getElementById('menu-links');
+
+    // Le decimos que escuche los clics
+    menuBtn.addEventListener('click', function() {
+        // La clase 'active' se pondrá o quitará cada vez que pulses
+        menuLinks.classList.toggle('active');
+        
+        // Efecto visual opcional: cambia el icono de hamburguesa (☰) a una equis (✕)
+        if(menuLinks.classList.contains('active')){
+            menuBtn.innerHTML = '✕';
+        } else {
+            menuBtn.innerHTML = '☰';
+        }
+    });
+</script>
+
 </body>
 </html>

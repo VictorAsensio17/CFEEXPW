@@ -41,6 +41,55 @@ body {
    NAVBAR
    ============================================ */
 
+
+/* --- Estilos por defecto (PC) --- */
+/* Ocultamos el botón hamburguesa en pantallas grandes */
+.mobile-menu-btn {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: var(--primary-color, #2e7d32); /* Tu verde oscuro */
+    cursor: pointer;
+}
+
+/* --- Estilos para Móvil --- */
+@media (max-width: 768px) {
+    /* 1. Mostramos el botón hamburguesa */
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    /* 2. Ocultamos y reestructuramos los enlaces */
+    .nav-links {
+        display: none; /* Oculto por defecto en móvil */
+        flex-direction: column; /* Apila los enlaces uno debajo de otro */
+        position: absolute;
+        top: 80px; /* Ajusta esto según la altura de tu cabecera */
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+        padding: 20px 0;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    /* 3. Estilo para los enlaces en móvil */
+    .nav-links a {
+        display: block;
+        padding: 15px 0;
+        border-bottom: 1px solid #f0f0f0;
+        width: 100%;
+    }
+
+    /* 4. Esta es la clase que JavaScript añadirá para mostrar el menú */
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+
 .navbar {
     background: var(--white);
     box-shadow: var(--shadow);
