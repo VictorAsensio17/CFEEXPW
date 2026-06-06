@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Club de Finanzas Estudiantes de Extremadura - La plataforma donde nace la próxima generación de líderes financieros.">
-    <title>Club Finanzas Extremadura - Educación Financiera</title>
+    <title>CFEEX - Educación Financiera</title>
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="shortcut icon" href="assets/favicon.png">
     <meta name="theme-color" content="#1abc9c">
@@ -19,7 +19,7 @@
             <div class="navbar-brand">
                 <div class="logo">
                     <img src="assets/favicon.png" alt="Club Finanzas EEX Logo" class="logo-icon">
-                    <span class="logo-text">Club Finanzas <strong>Extremadura</strong></span>
+                    <span class="logo-text" style="font-weight: arial; color: #1d5c21;">C.F.E.EX</span>
                 </div>
             </div>
             <ul class="nav-links">
@@ -39,18 +39,106 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="inicio" class="hero">
+    <section id="inicio" class="hero" style="position: relative; min-height: 100vh; display: flex; align-items: center; padding: 100px 0; overflow: hidden;">
+
+    <img src="assets/fondo-oficina.png" alt="Oficina CFEEX" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+        
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; color: white; pointer-events: none;"></div>
+
+    <style>
+/* --- Efecto Radar --- */
+            .badge-radar-container {
+                position: relative;
+                display: inline-block;
+                margin-bottom: 20px;
+                z-index: 2;
+            }
+
+            .radar-emitter {
+                position: absolute;
+                top: 50%;
+                left: 10px; /* Ajusta la posición del centro del radar */
+                transform: translateY(-50%);
+                width: 40px;
+                height: 40px;
+                z-index: -1; /* Asegura que lata por debajo de la etiqueta */
+                pointer-events: none;
+            }
+
+            .radar-wave {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 60%;
+                height: 60%;
+                border-radius: 50%;
+                border: 2px solid rgba(46, 204, 113, 0.8); /* Verde vibrante */
+                background: rgba(46, 204, 113, 0.15); /* Relleno semitransparente */
+                opacity: 0;
+                animation: radarPulse 2.5s infinite ease-out;
+            }
+
+            /* Retardos para que las ondas salgan en secuencia */
+            .radar-wave:nth-child(2) { animation-delay: 0.8s; }
+            .radar-wave:nth-child(3) { animation-delay: 1.6s; }
+
+            @keyframes radarPulse {
+                0% {
+                    transform: scale(0.5);
+                    opacity: 0;
+                }
+                20% {
+                    opacity: 1;
+                }
+                100% {
+                    transform: scale(4); /* Tamaño máximo de la onda */
+                    opacity: 0;
+                }
+            }
+
+            /* --- Animación de Texto --- */
+            .hero-animated-text {
+                color: black; /* Letras blancas */
+                text-shadow: 2px 2px 6px rgba(46, 204, 113, 0.5); /* Sombra verde suave para resaltar */
+                animation: slideUpFade 1s ease-out forwards;
+                opacity: 0; /* Empieza invisible para la animación */
+            }
+
+            /* Retrasamos un poco el párrafo para un efecto más natural */
+            p.hero-animated-text {
+                animation-delay: 0.2s; 
+            }
+
+            @keyframes slideUpFade {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        </style>
+
         <div class="container">
             <div class="hero-content">
-                <div class="hero-badge">Comunidad Universitaria Activa</div>
-                <h1>Impulsa tu futuro financiero desde la facultad.</h1>
-                <p>Únete a la red líder de estudiantes de Extremadura apasionados por la economía y los mercados. Networking, análisis real y formación exclusiva.</p>
-                <div class="hero-buttons">
-                    <button class="btn btn-primary" onclick="scrollToSection('admission')">Únete Ahora</button>
-                    <button class="btn btn-secondary">Conocer más</button>
+                <div class="badge-radar-container">
+                    <div class="radar-emitter">
+                        <div class="radar-wave"></div>
+                        <div class="radar-wave"></div>
+                        <div class="radar-wave"></div>
+                    </div>
+                <div class="hero-badge" style="position: relative; background: #e8f5e9; color: #2e7d32; border-radius: 20px; padding: 5px 15px; font-weight: bold; display: inline-block;">Comunidad Universitaria Activa</div>
+                    </div>
+                <h1 class="hero-animated-text" style="color: #FFFFFF !important; text-shadow: 2px 4px 8px rgba(0,0,0,0.8), 0 0 30px rgba(0,0,0,0.6) !important; font-weight: 800;">Impulsa tu futuro financiero desde la facultad</h1>
+                <p class="hero-animated-text" style="color: #F8F9FA !important; text-shadow: 1px 2px 6px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.7) !important; font-size: 1.15rem; font-weight: 500; line-height: 1.6;">Únete a la red líder de estudiantes de Extremadura apasionados por la economía y los mercados. Networking, análisis real y formación exclusiva.</p>
+                <div class="hero-buttons" style="position: relative; z-index: 3; animation: slideUpFade 1s ease-out 0.4s forwards; opacity: 0;">
+                    <button class="btn btn-primary" style="color: #F8F9FA !important; text-shadow: 1px 2px 6px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.7) !important; font-size: 1.15rem; font-weight: 500; line-height: 1.6;" onclick="scrollToSection('admission')">Únete Ahora</button>
+                    <button class="btn btn-secondary" style="color: #F8F9FA !important; text-shadow: 1px 2px 6px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.7) !important; font-size: 1.15rem; font-weight: 500; line-height: 1.6;">Conocer más</button>
                 </div>
             </div>
-            <div class="hero-image">
+            <div class="hero-image" style="flex: 1; min-width: 300px; position: relative; z-index: 10;">
                 <div class="market-overview tradingview-hero-container">
                     <!-- Chart 1: Oro -->
                     <div class="tradingview-widget-wrapper-small">
@@ -123,7 +211,7 @@
     </section>
 
     <!-- Pilares Section -->
-    <section class="pillars">
+    <section class="pillars" style="background: white; position: relative; z-index: 5;">
         <div class="container">
             <h2>¿QUIÉNES SOMOS?</h2>
             <h3>La plataforma donde nace la próxima generación de líderes financieros.</h3>

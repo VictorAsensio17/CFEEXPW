@@ -17,8 +17,7 @@
             <div class="navbar-brand">
                 <div class="logo">
                     <img src="../assets/favicon.png" alt="Club Finanzas EEX Logo" class="logo-icon">
-                    <span class="logo-text">Club Finanzas <strong>Extremadura</strong></span>
-                </div>
+                    <span class="logo-text" style="font-weight: arial; color: #1d5c21;">C.F.E.EX</span>
             </div>
             <ul class="nav-links">
                 <li><a href="../index.html">Inicio</a></li>
@@ -32,19 +31,36 @@
     </nav>
 
     <!-- Hero Page -->
-    <section class="hero" style="padding: 100px 0 60px;">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Sobre Nosotros</h1>
-                <p>Descubre quiénes somos, qué hacemos y por qué el Club de Finanzas Extremadura es el lugar perfecto para tu desarrollo profesional.</p>
+     <style>
+        @keyframes fadeAndSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+     </style>
+
+    <section class="hero" style="position: relative; height: 400px; display: flex; align-items: flex-end; padding-bottom: 60px; overflow: hidden;">
+        <img src="../assets/hero-about.png" alt="Sobre Nosotros" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+        
+        <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 60%; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); z-index: 1;"></div>
+        
+        <div class="container" style="position: relative; z-index: 3; width: 100%; display: flex; justify-content: center;">
+            <div class="hero-content" style="color: white; animation: fadeAndSlideUp 1.2s ease-out forwards; text-shadow: 2px 2px 6px rgba(0,0,0,0.5); text-align: center; max-width: 800px;">
+                <h1 style="font-size: 3.5rem; margin-bottom: 15px; color: white;">Sobre Nosotros</h1>
+                <p style="font-size: 1.2rem; margin: 0 auto; color: white;">Descubre quiénes somos, qué hacemos y por qué el CFEEX es el lugar perfecto para tu desarrollo profesional.</p>
             </div>
         </div>
     </section>
 
     <!-- Mission, Vision, Values -->
-    <section class="pillars">
+    <section class="pillars" style="padding: 80px 0; background: #f8f9fa;">
         <div class="container">
-            <h2>NUESTROS PILARES</h2>
+            <h2 style="text-align: center; font-size: 0.9rem; color: var(--primary-color); letter-spacing: 2px; margin-bottom: 40px;">NUESTROS PILARES</h2>
             <h3>Misión, Visión y Valores</h3>
             
             <div class="pillars-grid">
@@ -75,28 +91,88 @@
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
                 <div style="background: white; padding: 30px; border-radius: 10px; text-align: center; box-shadow: var(--shadow);">
-                    <div style="width: 100px; height: 100px; margin: 0 auto 20px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 40px;">👨‍💼</div>
+                    <div style="width: 100px; height: 100px; margin: 0 auto 20px; background: transparent; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 40px;"><img src="../assets/presidente.png" alt="Presidente" style="width: 100%; height: 100%; object-fit: contain;"></div>
                     <h4 style="margin-bottom: 5px;">Presidente</h4>
-                    <p style="color: var(--text-light); margin-bottom: 10px;">Educación y Dirección</p>
-                    <p style="color: var(--text-light); font-size: 0.9rem;">Coordinador general del club</p>
+                    <p style="color: var(--text-light); margin-bottom: 10px;">Francisco Muñoz Moreno</p>
+                    <p style="color: var(--text-light); font-size: 0.9rem;">Representate del club y portavoz</p>
                 </div>
 
                 <div style="background: white; padding: 30px; border-radius: 10px; text-align: center; box-shadow: var(--shadow);">
-                    <div style="width: 100px; height: 100px; margin: 0 auto 20px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 40px;">👩‍💼</div>
+                    <div style="width: 100px; height: 100px; margin: 0 auto 20px; background: transparent; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 40px;"><img src="../assets/vicepresidente.png" alt="Vicepresidente" style="width: 100%; height: 100%; object-fit: contain;"></div>
                     <h4 style="margin-bottom: 5px;">Vicepresidente</h4>
-                    <p style="color: var(--text-light); margin-bottom: 10px;">Operaciones y Logística</p>
-                    <p style="color: var(--text-light); font-size: 0.9rem;">Gestión de eventos y actividades</p>
+                    <p style="color: var(--text-light); margin-bottom: 10px;">Víctor Asensio Muñoz</p>
+                    <p style="color: var(--text-light); font-size: 0.9rem;">Soporte, asistencia y coordinación</p>
                 </div>
 
                 <div style="background: white; padding: 30px; border-radius: 10px; text-align: center; box-shadow: var(--shadow);">
-                    <div style="width: 100px; height: 100px; margin: 0 auto 20px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 40px;">👨‍🔬</div>
-                    <h4 style="margin-bottom: 5px;">Responsable Análisis</h4>
-                    <p style="color: var(--text-light); margin-bottom: 10px;">Contenido y Formación</p>
-                    <p style="color: var(--text-light); font-size: 0.9rem;">Creación de contenido especializado</p>
+                    <div style="width: 100px; height: 100px; margin: 0 auto 20px; background: transparent; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 40px;"><img src="../assets/secretario.png" alt="Secretario" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                    <h4 style="margin-bottom: 5px;">Secretario</h4>
+                    <p style="color: var(--text-light); margin-bottom: 10px;">Jaime Rodríguez Otero</p>
+                    <p style="color: var(--text-light); font-size: 0.9rem;">Gestión documental y creación de contenido</p>
+                </div>
+
+                <div style="background: white; padding: 30px; border-radius: 10px; text-align: center; box-shadow: var(--shadow);">
+                    <div style="width: 100px; height: 100px; margin: 0 auto 20px; background: transparent; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 40px;"><img src="../assets/tesorero.png" alt="Tesorero" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                    <h4 style="margin-bottom: 5px;">Tesorero</h4>
+                    <p style="color: var(--text-light); margin-bottom: 10px;">Juan Manuel Gómez Rodríguez</p>
+                    <p style="color: var(--text-light); font-size: 0.9rem;">Gestión financiera y administrativa</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!--Fundators-->>
+    <section class="team-section" style="padding: 80px 0; background: #f8f9fa;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 0.9rem; color: var(--primary-color); letter-spacing: 2px; margin-bottom: 10px;">MIEMBROS FUNDADORES</h2>
+            <h3 style="text-align: center; font-size: 2.5rem; margin-bottom: 50px; color: var(--text-dark);">Conoce a los Fundadores</h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                <div style="background: white; padding: 30px; border-radius: 10px; text-align: center; box-shadow: var(--shadow);">
+                    <div style="width: 100px; height: 100px; margin: 0 auto 20px; background: transparent; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 40px;"><img src="../assets/presidente.png" alt="Presidente" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                    <h4 style="margin-bottom: 5px;">Cofundador</h4>
+                    <p style="color: var(--text-light); margin-bottom: 10px;">Francisco Muñoz Moreno</p>
+                    <p style="color: var(--text-light); font-size: 0.9rem;">Ex-Presidente</p>
+                </div>
+
+                <div style="background: white; padding: 30px; border-radius: 10px; text-align: center; box-shadow: var(--shadow);">
+                    <div style="width: 100px; height: 100px; margin: 0 auto 20px; background: transparent; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 40px;"><img src="../assets/vicepresidente.png" alt="Vicepresidente" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                    <h4 style="margin-bottom: 5px;">Cofundador</h4>
+                    <p style="color: var(--text-light); margin-bottom: 10px;">Víctor Asensio Muñoz</p>
+                    <p style="color: var(--text-light); font-size: 0.9rem;">Ex-Vicepresidente</p>
+                </div>
+
+                <div style="background: white; padding: 30px; border-radius: 10px; text-align: center; box-shadow: var(--shadow);">
+                    <div style="width: 100px; height: 100px; margin: 0 auto 20px; background: transparent; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 40px;"><img src="../assets/secretario.png" alt="Secretario" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                    <h4 style="margin-bottom: 5px;">Cofundador</h4>
+                    <p style="color: var(--text-light); margin-bottom: 10px;">Jaime Rodríguez Otero</p>
+                    <p style="color: var(--text-light); font-size: 0.9rem;">Ex-Secretario</p>
+                </div>
+
+                <div style="background: white; padding: 30px; border-radius: 10px; text-align: center; box-shadow: var(--shadow);">
+                    <div style="width: 100px; height: 100px; margin: 0 auto 20px; background: transparent; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 40px;"><img src="../assets/tesorero.png" alt="Tesorero" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                    <h4 style="margin-bottom: 5px;">Cofundador</h4>
+                    <p style="color: var(--text-light); margin-bottom: 10px;">Juan Manuel Gómez Rodríguez</p>
+                    <p style="color: var(--text-light); font-size: 0.9rem;">Ex-Tesorero</p>
+                </div>
+
+                <div style="background: white; padding: 30px; border-radius: 10px; text-align: center; box-shadow: var(--shadow);">
+                    <div style="width: 100px; height: 100px; margin: 0 auto 20px; background: transparent; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 40px;"><img src="../assets/tesorero.png" alt="Tesorero" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                    <h4 style="margin-bottom: 5px;">Cofundador</h4>
+                    <p style="color: var(--text-light); margin-bottom: 10px;">Antonio González Viera</p>
+                    <p style="color: var(--text-light); font-size: 0.9rem;">Ex-Relaciones Exteriores</p>
+                </div>
+
+                <div style="background: white; padding: 30px; border-radius: 10px; text-align: center; box-shadow: var(--shadow);">
+                    <div style="width: 100px; height: 100px; margin: 0 auto 20px; background: transparent; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 40px;"><img src="../assets/tesorero.png" alt="Tesorero" style="width: 100%; height: 100%; object-fit: contain;"></div>
+                    <h4 style="margin-bottom: 5px;">Cofundador</h4>
+                    <p style="color: var(--text-light); margin-bottom: 10px;">Marcos Pesado Fernández</p>
+                    <p style="color: var(--text-light); font-size: 0.9rem;">Ex-Asistente en red e informática</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- History Timeline -->
     <section style="padding: 80px 0; background: white;">
@@ -107,17 +183,17 @@
             <div style="position: relative;">
                 <div style="border-left: 3px solid var(--primary-color); padding-left: 40px;">
                     <div style="margin-bottom: 40px;">
-                        <h4 style="color: var(--primary-color); font-size: 1.3rem;">2024 - Nacimiento del Club</h4>
+                        <h4 style="color: var(--primary-color); font-size: 1.3rem;">05/2026 - Nacimiento del Club</h4>
                         <p style="color: var(--text-light); margin-top: 10px;">Fundación del Club de Finanzas Estudiantes de Extremadura por un grupo de estudiantes apasionados por los mercados financieros.</p>
                     </div>
 
                     <div style="margin-bottom: 40px;">
-                        <h4 style="color: var(--primary-color); font-size: 1.3rem;">2024 (H2) - Primeros Eventos</h4>
+                        <h4 style="color: var(--primary-color); font-size: 1.3rem;">09/2026 - Primeros Eventos</h4>
                         <p style="color: var(--text-light); margin-top: 10px;">Realizamos nuestros primeros talleres y debates con más de 150 asistentes.</p>
                     </div>
 
                     <div style="margin-bottom: 40px;">
-                        <h4 style="color: var(--primary-color); font-size: 1.3rem;">2025 - Expansión</h4>
+                        <h4 style="color: var(--primary-color); font-size: 1.3rem;"> - Expansión</h4>
                         <p style="color: var(--text-light); margin-top: 10px;">Aumento de miembros activos, alianzas con empresas financieras y lanzamiento de contenido especializado.</p>
                     </div>
 
