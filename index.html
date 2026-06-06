@@ -380,23 +380,6 @@
         </div>
     </footer>
 
-    <!-- Modal para gráficas -->
-    <div id="chartModal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close" onclick="closeStockChart()">&times;</span>
-            <h2 id="chartTitle">Gráfica del Índice</h2>
-            <div class="chart-container">
-                <canvas id="stockChart"></canvas>
-            </div>
-            <p id="chartInfo" class="chart-info"></p>
-        </div>
-    </div>
-
-    <!-- Librería Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/financial-data.js"></script>
-
     <script>
         document.getElementById('admissionForm').addEventListener('submit', function(e) {
             e.preventDefault(); // Evita que la página se recargue
