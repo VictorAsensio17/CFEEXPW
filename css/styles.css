@@ -620,14 +620,14 @@ body {
 .admission-content {
     display: flex;
     flex-direction: column; /* Apila los elementos verticalmente */
-    align-items: center; /* Centra todo horizontalmente */
-    gap: 40px;
+    align-items: left; /* Centra todo horizontalmente */
+    gap: 37px;
     width: 100%;
 }
 
 /* --- ESTILOS DE LA CABECERA (TEXTOS) --- */
 .admission-text {
-    text-align: center;
+    text-align: left;
     width: 100%;
     max-width: 800px; /* Evita que el texto sea demasiado ancho en pantallas grandes */
 }
@@ -641,61 +641,10 @@ body {
 }
 
 .admission-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     color: #7f8c8d; /* Gris sutil */
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     line-height: 1.5;
-}
-
-/* --- LISTA DE BENEFICIOS --- */
-.benefits {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra el bloque de beneficios */
-    gap: 35px;
-    width: 100%;
-}
-
-.benefit-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 600px;
-}
-
-.benefit-number {
-    background-color: #1abc9c;
-    color: white;
-    min-width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-right: 25px;
-    flex-shrink: 0;
-}
-
-.benefit-content {
-    text-align: center;
-    flex: 1;
-}
-
-.benefit-content h5 {
-    font-size: 1.3rem;
-    color: #2c3e50;
-    margin-bottom: 8px;
-    font-weight: 700;
-}
-
-.benefit-content p {
-    color: #7f8c8d;
-    font-size: 1.05rem;
-    margin: 0;
-    line-height: 1.4;
 }
 
 /* --- AJUSTE DEL ANCHO DEL FORMULARIO --- */
@@ -714,7 +663,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 50px; /* Espacio entre el texto y el formulario */
+    gap: 70px; /* Espacio entre el texto y el formulario */
     width: 100%;
 }
 
