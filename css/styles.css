@@ -47,6 +47,56 @@ body {
    NAVBAR
    ============================================ */
 
+
+/* --- Estilos por defecto (PC) --- */
+/* Ocultamos el botón hamburguesa en pantallas grandes */
+.mobile-menu-btn {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: var(--primary-color, #2e7d32); /* Tu verde oscuro */
+    cursor: pointer;
+}
+
+/* --- Estilos para Móvil --- */
+@media (max-width: 768px) {
+    /* 1. Mostramos el botón hamburguesa */
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    /* 2. Ocultamos y reestructuramos los enlaces */
+    .nav-links {
+        display: none; /* Oculto por defecto en móvil */
+        flex-direction: column; /* Apila los enlaces uno debajo de otro */
+        position: absolute;
+        top: 80px; /* Ajusta esto según la altura de tu cabecera */
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+        padding: 20px 0;
+        text-align: center;
+        z-index: 9999 !important;
+    }
+
+    /* 3. Estilo para los enlaces en móvil */
+    .nav-links a {
+        display: block;
+        padding: 15px 0;
+        border-bottom: 1px solid #f0f0f0;
+        width: 100%;
+    }
+
+    /* 4. Esta es la clase que JavaScript añadirá para mostrar el menú */
+    .nav-links.active {
+        display: flex !important;
+        z-index: 9999 !important;
+    }
+}
+
+
 .navbar {
     background: var(--white);
     box-shadow: var(--shadow);
@@ -142,20 +192,6 @@ body {
     box-shadow: 0 5px 15px rgba(26, 188, 156, 0.3);
 }
 
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-}
-
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background: var(--text-dark);
-    border-radius: 2px;
-    transition: var(--transition);
-}
 
 /* ============================================
    HERO SECTION
@@ -590,14 +626,14 @@ body {
 .admission-content {
     display: flex;
     flex-direction: column; /* Apila los elementos verticalmente */
-    align-items: center; /* Centra todo horizontalmente */
-    gap: 40px;
+    align-items: left; /* Centra todo horizontalmente */
+    gap: 37px;
     width: 100%;
 }
 
 /* --- ESTILOS DE LA CABECERA (TEXTOS) --- */
 .admission-text {
-    text-align: center;
+    text-align: left;
     width: 100%;
     max-width: 800px; /* Evita que el texto sea demasiado ancho en pantallas grandes */
 }
@@ -611,61 +647,10 @@ body {
 }
 
 .admission-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     color: #7f8c8d; /* Gris sutil */
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     line-height: 1.5;
-}
-
-/* --- LISTA DE BENEFICIOS --- */
-.benefits {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra el bloque de beneficios */
-    gap: 35px;
-    width: 100%;
-}
-
-.benefit-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 600px;
-}
-
-.benefit-number {
-    background-color: #1abc9c;
-    color: white;
-    min-width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-right: 25px;
-    flex-shrink: 0;
-}
-
-.benefit-content {
-    text-align: center;
-    flex: 1;
-}
-
-.benefit-content h5 {
-    font-size: 1.3rem;
-    color: #2c3e50;
-    margin-bottom: 8px;
-    font-weight: 700;
-}
-
-.benefit-content p {
-    color: #7f8c8d;
-    font-size: 1.05rem;
-    margin: 0;
-    line-height: 1.4;
 }
 
 /* --- AJUSTE DEL ANCHO DEL FORMULARIO --- */
@@ -684,7 +669,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 50px; /* Espacio entre el texto y el formulario */
+    gap: 70px; /* Espacio entre el texto y el formulario */
     width: 100%;
 }
 

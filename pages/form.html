@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Club de Finanzas Estudiantes de Extremadura</title>
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <link rel="shortcut icon" href="../assets/favicon.png">
+    <meta name="theme-color" content="#1abc9c">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <div class="logo">
+                    <img src="../assets/favicon.png" alt="Club Finanzas EEX Logo" class="logo-icon">
+                    <span class="logo-text" style="font-weight: arial; color: #1d5c21;">CFEEX</span>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="about.html">Sobre Nosotros</a></li>
+                <li><a href="activities.html">Actividades</a></li>
+                <li><a href="resources.html">Recursos</a></li>
+                <li><a href="contact.html" class="active">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+  
+    <section style="padding: 80px 0; background: white;">
+
+        <div class="container">
+         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start;">
+            <div class="section-header">
+                <h2 style="font-size: 2rem; margin-bottom: 30px; color: var(--primary-color);">ÚNETE AL CLUB</h2>
+                <h3>Solicita tu ingreso y forma parte de la comunidad financiera más activa de Extremadura</h3>
+                <p>Completa el formulario a continuación para que podamos conocerte mejor y darte la bienvenida al club.</p> 
+            </div>
+
+            <div style="background: #f8f9fa; padding: 40px; border-radius: 10px";>
+                <h3 style="font-size: 1.5rem; margin-bottom: 25px; color: var(--text-dark);">Solicitud de ingreso</h3>
+
+                  <form id="admissionForm">
+                    <div class="form-group">
+                        <label for="Nombre">Nombre completo</label>
+                        <input type="text" id="Nombre" name="Nombre" placeholder="Ej: Juan Pérez García" required>
+                    </div>
+
+                   
+                    <div class="form-group">
+                        <label for="Telefono">Teléfono</label>
+                        <input type="tel" id="Teléfono" name="Telefono" placeholder="Ej: +34 600 000 000" required>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="Email">Email universitario/personal</label>
+                        <input type="email" id="Email" name="Email" placeholder="Ej: usuario@alumnos.unex.es/@gmail.com" required>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="Grupo">Grupo / Situación académica</label>
+                        <select id="Grupo" name="Grupo" required>
+                            <option value="">Selecciona tu grupo</option>
+                            <option value="Grado 1º Año">Grado 1º Año</option>
+                            <option value="Grado 2º Año">Grado 2º Año</option>
+                            <option value="Grado 3º Año">Grado 3º Año</option>
+                            <option value="Grado 4º Año">Grado 4º Año</option>
+                            <option value="Grado 5º Año">Grado 5º Año</option>
+                            <option value="Máster">Máster</option>
+                            <option value="Alumni">Alumni</option>
+                        </select>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        <label for="Mensaje">Facultad / Campo de referencia</label>
+                        <textarea id="Mensaje" name="Mensaje" placeholder="Ej: Facultad de Ciencias Económicas y Empresariales / Profesional en Finanzas" rows="3" required></textarea>
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">Enviar Solicitud de Ingreso</button>
+
+                    <div id="formStatus" style="margin-top: 15px; font-weight: 500; display: none; text-align: center;"></div>
+                </form>
+              </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer" style="background-color: #1a202c; color: #ffffff; padding: 60px 0 30px;">
+       <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="../assets/favicon.png" alt="Logo" class="footer-logo-img">
+                        <span>Club de Finanzas Estudiantes de Extremadura</span>
+                    </div>
+                    <p>La mayor comunidad universitaria dedicada a la educación financiera y el análisis de mercados en Extremadura.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon" title="LinkedIn">
+                            <img src="../assets/linkedin.png" alt="LinkedIn">
+                        </a>
+                        <a href="#" class="social-icon" title="Instagram">
+                            <img src="../assets/instagram.png" alt="Instagram">
+                        </a>
+                        <a href="#" class="social-icon" title="X (Twitter)">
+                            <img src="../assets/x.png" alt="X">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h5 style="margin-top: 0; margin-bottom: 25px; font-size: 1.1rem; letter-spacing: 1px;">NAVEGACIÓN</h5>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 15px;">
+                        <li><a href="../index.html" style="color: #a0aec0; text-decoration: none;">Inicio</a></li>
+                        <li><a href="about.html" style="color: #a0aec0; text-decoration: none;">Sobre Nosotros</a></li>
+                        <li><a href="activities.html" style="color: #a0aec0; text-decoration: none;">Actividades</a></li>
+                        <li><a href="resources.html" style="color: #a0aec0; text-decoration: none;">Recursos</a></li>
+                        <li><a href="contact.html" style="color: #a0aec0; text-decoration: none;">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h5 style="margin-top: 0; margin-bottom: 25px; font-size: 1.1rem; letter-spacing: 1px;">LEGAL</h5>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 15px;">
+                        <li><a href="#" style="color: #a0aec0; text-decoration: none;">Privacidad</a></li>
+                        <li><a href="#" style="color: #a0aec0; text-decoration: none;">Cookies</a></li>
+                        <li><a href="#" style="color: #a0aec0; text-decoration: none;">Aviso Legal</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Club de Finanzas Estudiantes de Extremadura. Todos los derechos reservados.</p>
+                <p>Hecho con ❤️ para los futuros financieros de Extremadura.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('admissionForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Evita que la página se recargue
+            
+            const form = this;
+            const btn = document.getElementById('submitBtn');
+            const statusDiv = document.getElementById('formStatus');
+            
+            // Cambiar el botón a estado de carga
+            const originalText = btn.innerText;
+            btn.innerText = 'Enviando...';
+            btn.disabled = true;
+            statusDiv.style.display = 'none'; // Ocultar mensajes previos
+            
+            // Recoger los datos del formulario
+            const formData = new FormData(form);
+            
+            // Añadir la Fecha actual automáticamente (formato dd/mm/yyyy, hh:mm:ss)
+            const fechaActual = new Date().toLocaleString('es-ES');
+            formData.append('Fecha', fechaActual);
+
+            // URL de tu API de Apps Script
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwJ1wBTtwcmrZwL016VQdLTjIOtpqrhIRSV2enV0ngjFYX5_SgAEwZoxkQZvGMaYpBW/exec';
+
+            // Enviar datos vía POST
+            fetch(scriptURL, { method: 'POST', body: formData })
+                .then(response => {
+                    statusDiv.style.display = 'block';
+                    statusDiv.style.color = '#1abc9c'; // Color principal del club
+                    statusDiv.innerText = '¡Solicitud enviada con éxito! Nos pondremos en contacto contigo pronto.';
+                    form.reset(); // Limpiar el formulario
+                })
+                .catch(error => {
+                    statusDiv.style.display = 'block';
+                    statusDiv.style.color = '#e74c3c'; // Rojo para indicar error
+                    statusDiv.innerText = 'Hubo un error al enviar la solicitud. Por favor, inténtalo de nuevo.';
+                    console.error('Error!', error.message);
+                })
+                .finally(() => {
+                    // Restaurar el botón a su estado original
+                    btn.innerText = originalText;
+                    btn.disabled = false;
+                });
+        });
+    </script>
+
+    <script src="../js/scripts.js"></script>
+
