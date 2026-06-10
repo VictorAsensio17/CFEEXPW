@@ -53,7 +53,7 @@
                         <h4 style="color: var(--primary-color); margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
                             Email
                         </h4>
-                        <a href="mailto:clubfineex@cfeexes.com" style="color: var(--text-light); text-decoration: none;">clubfineex@gmail.com</a>
+                        <a href="mailto:clubfineex@gmail.com" style="color: var(--text-light); text-decoration: none;">clubfineex@gmail.com</a>
                     </div>
 
                     <div style="margin-bottom: 30px;">
@@ -255,8 +255,13 @@
                     timestamp: new Date().toLocaleString('es-ES')
                 };
                 
-                console.log('Mensaje de contacto:', formData);
-                showNotification('¡Mensaje enviado correctamente! Nos pondremos en contacto pronto.', 'success');
+                const recipient = 'clubfineex@gmail.com';
+                const subject = `Contacto desde el sitio web: ${formData.subject}`;
+                const body = `Nombre: ${formData.name}\nEmail: ${formData.email}\nAsunto: ${formData.subject}\nMensaje:\n${formData.message}\n\nDesea recibir información: ${formData.subscribe ? 'Sí' : 'No'}\nEnviado: ${formData.timestamp}`;
+                const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                window.location.href = mailtoLink;
+                showNotification('¡Mensaje preparado para enviar por email! Revisa tu cliente de correo.', 'success');
                 contactForm.reset();
                 
                 setTimeout(() => removeNotification(), 5000);
