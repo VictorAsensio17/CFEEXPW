@@ -1,0 +1,32 @@
+[
+  {
+    "id": "RES-001",
+    "title": "Cómo analizar un informe anual",
+    "category": "mercados",
+    "excerpt": "Guía para entender los puntos clave de un informe financiero corporativo.",
+    "author": "Laura Martínez",
+    "publishedAt": "2026-05-20T10:00:00.000Z",
+    "views": 320,
+    "readTime": "7 minutos"
+  },
+  {
+    "id": "RES-002",
+    "title": "Nuevas oportunidades de inversión sostenible",
+    "category": "tecnologia",
+    "excerpt": "Descubre cómo la economía verde está cambiando el panorama financiero.",
+    "author": "Pablo Sánchez",
+    "publishedAt": "2026-06-08T08:30:00.000Z",
+    "views": 210,
+    "readTime": "6 minutos"
+  },
+  {
+    "id": "RES-003",
+    "title": "Gestión de riesgos para nuevos inversores",
+    "category": "educación",
+    "excerpt": "Buenas prácticas para proteger tu inversión y reducir la volatilidad.",
+    "author": "Ana Ruiz",
+    "publishedAt": "2026-07-01T12:00:00.000Z",
+    "views": 185,
+    "readTime": "5 minutos"
+  }
+]

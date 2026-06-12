@@ -4,17 +4,14 @@
 
 ### Base URL
 ```
-https://api.clubfinanzasextremadura.es/v1
+http://localhost:3000/api
 ```
 
 ---
 
 ## 👤 Autenticación
 
-Todos los endpoints requieren autenticación con token JWT en el header:
-```
-Authorization: Bearer <token>
-```
+Actualmente no se requiere autenticación para los endpoints de admisión y contacto.
 
 ---
 
@@ -22,7 +19,7 @@ Authorization: Bearer <token>
 
 ### 1. ADMISIONES
 
-#### POST `/admission/register`
+#### POST `/admission`
 Registrar nuevo miembro
 
 **Request:**
@@ -55,7 +52,7 @@ Registrar nuevo miembro
 
 ### 2. CONTACTO
 
-#### POST `/contact/message`
+#### POST `/contact`
 Enviar mensaje de contacto
 
 **Request:**

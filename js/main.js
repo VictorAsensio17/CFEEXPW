@@ -75,28 +75,39 @@ if (hamburger) {
 // Form submission handler
 const admissionForm = document.getElementById('admissionForm');
 if (admissionForm) {
-    admissionForm.addEventListener('submit', function(e) {
+    admissionForm.addEventListener('submit', async function(e) {
         e.preventDefault();
-        
-        // Collect form data
-        const formData = {
+
+        const payload = {
             fullName: document.getElementById('fullName').value,
             email: document.getElementById('email').value,
             degree: document.getElementById('degree').value,
             interests: document.getElementById('interests').value,
-            timestamp: new Date().toLocaleString('es-ES')
+            phone: document.getElementById('phone') ? document.getElementById('phone').value : '',
+            timestamp: new Date().toISOString()
         };
-        
-        // Here you would normally send data to a server
-        console.log('Form submitted:', formData);
-        
-        // Show success message
-        showNotification('¡Solicitud enviada correctamente! Nos pondremos en contacto pronto.', 'success');
-        
-        // Reset form
-        admissionForm.reset();
-        
-        // Optional: Clear success message after 5 seconds
+
+        try {
+            const response = await fetch('/api/admission', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            });
+
+            const result = await response.json();
+            if (response.ok) {
+                showNotification(result.message || '¡Solicitud enviada correctamente! Nos pondremos en contacto pronto.', 'success');
+                admissionForm.reset();
+            } else {
+                showNotification(result.message || 'Error al enviar la solicitud. Por favor intenta de nuevo.', 'error');
+            }
+        } catch (error) {
+            console.error('Error sending admission form:', error);
+            showNotification('Error de red: no se pudo conectar con el servidor.', 'error');
+        }
+
         setTimeout(() => {
             removeNotification();
         }, 5000);

@@ -31,6 +31,10 @@ python3 -m http.server 8000
 
 # Con Node.js (si tienes instalado)
 npx http-server
+
+# Con el backend de usuarios y automatizaciones
+npm install
+npm start
 ```
 
 ---
