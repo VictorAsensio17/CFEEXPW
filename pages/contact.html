@@ -262,29 +262,26 @@
             contactForm.addEventListener('submit', async function(e) {
                 e.preventDefault();
 
-                const payload = {
-                    name: document.getElementById('contactName').value,
-                    email: document.getElementById('contactEmail').value,
-                    subject: document.getElementById('contactSubject').value,
-                    message: document.getElementById('contactMessage').value,
-                    subscribe: document.querySelector('input[name="subscribe"]').checked ? 'Sí' : 'No'
-                };
+                const formData = new FormData(contactForm);
+                formData.set('subscribe', document.querySelector('input[name="subscribe"]').checked ? 'Sí' : 'No');
+                formData.set('_replyto', document.getElementById('contactEmail').value);
 
                 try {
-                    const response = await fetch('/api/contact', {
+                    const response = await fetch(contactForm.action, {
                         method: 'POST',
+                         body: formData,
                         headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(payload)
+                            'Accept': 'application/json'
+                        }
                     });
 
-                    const result = await response.json();
                     if (response.ok) {
-                        showNotification(result.message || '¡Mensaje enviado correctamente! Gracias por contactarnos.', 'success');
+                        showNotification('¡Mensaje enviado correctamente! Gracias por contactarnos.', 'success');
                         contactForm.reset();
                     } else {
-                        showNotification(result.message || 'No se pudo enviar el mensaje.', 'error');
+                        const data = await response.json();
+                        const errorMessage = data.errors ? data.errors.map(error => error.message).join(', ') : 'No se pudo enviar el mensaje.';
+                        showNotification(`Error al enviar el mensaje: ${errorMessage}`, 'error');
                     }
                 } catch (error) {
                     console.error('Error sending contact form:', error);
@@ -295,6 +292,7 @@
             });
         }
 
+        // Make details elements work better
         document.querySelectorAll('details').forEach(detail => {
             detail.addEventListener('toggle', function() {
                 const summary = this.querySelector('summary');

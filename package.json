@@ -2,14 +2,11 @@
   "name": "Club Finanzas Extremadura",
   "version": "1.0.0",
   "description": "Página web oficial del Club de Finanzas Estudiantes de Extremadura",
-  "main": "server.js",
+  "main": "index.html",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js",
-    "build": "echo 'No build step for static + Node backend'"
-  },
-  "dependencies": {
-    "express": "^4.18.4"
+   "start": "python -m http.server 8000",
+    "build": "echo 'Build script would go here'",
+    "dev": "echo 'Development server setup'"
   },
   "keywords": [
     "finanzas",
