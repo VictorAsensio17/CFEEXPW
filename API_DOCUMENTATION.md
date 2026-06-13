@@ -399,5 +399,5 @@ def register_admission():
 
 ## 📞 Contacto para Integraciones
 
-**Email**: dev@clubfinanzasextremadura.es  
+**Email**: clubfineex@gmail.com  
 **Documentación interactiva**: https://api.clubfinanzasextremadura.es/docs

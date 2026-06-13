@@ -234,4 +234,4 @@ Usar online: [minifier.org](https://minifier.org)
 
 **¡Tu sitio está listo para desplegarse!** 🚀
 
-Para dudas: `clubfinanzasext@cfeexes.com`
+Para dudas: `clubfineex@gmail.com`
